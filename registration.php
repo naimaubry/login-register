@@ -1,3 +1,9 @@
+<?php
+session_start(); #way to store information across different pages
+if (isset($_SESSION["user"])) {
+    header("Location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,6 +87,9 @@
                 <input type="submit" class = "btn btn-primary" value="Register" name = "submit">
             </div>
         </form>
+        <div>
+        <div><p>Already Registered <a href="login.php">Login Here</a></p></div>
+    </div>
     </div>
 </body>
 </html>
